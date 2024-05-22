@@ -42,6 +42,10 @@ def convert_to_gif(file, fileOutput):
 @click.option('--path', '-p', help='Designate the path.')
 
 def main(path):
+    if path is None:
+        print('Especifique um caminho')
+        return 0
+    
     filesMP4 = []
     filesMP4backup = []
     ##mudar cwd
